@@ -34,7 +34,6 @@ class Item(BaseModel):
 @app.post("/search")
 async def search(item: Item):
     x = jsonable_encoder(item)
-    # print(x)
 
     display = str(x["display"])
     query = urllib.parse.quote(x["keywords"])
